@@ -1,4 +1,4 @@
-## Stitches Site
+## React CLI website
 
 This is the source code of the [React CLI documentation](https://react-cli.dev).
 
