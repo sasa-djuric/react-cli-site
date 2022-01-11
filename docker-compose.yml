@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+    web:
+        container_name: react_cli
+        build: .
+        restart: always
+        ports:
+            - 9000:3000
+        volumes:
+            - ./:/app
+        environment:
+            VIRTUAL_HOST: reactcli.dev,www.reactcli.dev
+            LETSENCRYPT_HOST: reactcli.dev,www.reactcli.dev
+            LETSENCRYPT_EMAIL: contact@reactcli.dev
+
+networks:
+    default:
+        external:
+            name: nginx-proxy

@@ -1,0 +1,149 @@
+{
+	"project": {
+		"path": "./src",
+		"typescript": true,
+		"fileNaming": {
+			"casing": "kebab",
+			"name": "{name}",
+			"postfix": "",
+			"postfixDevider": "."
+		},
+		"lint": false,
+		"format": false,
+		"verbose": true,
+		"export": {
+			"default": false,
+			"inline": true
+		}
+	},
+	"component": {
+		"default": {
+			"style": true,
+			"story": false,
+			"test": false,
+			"proptypes": false,
+			"index": true,
+			"inFolder": true,
+			"open": true,
+			"fileNaming": {
+				"name": "{name}",
+				"postfix": "",
+				"casing": "kebab",
+				"postfixDevider": "."
+			},
+			"path": "/components",
+			"class": false,
+			"redux": false,
+			"testId": false
+		},
+		"page": {
+			"style": false,
+			"story": false,
+			"test": false,
+			"proptypes": false,
+			"index": false,
+			"inFolder": false,
+			"open": true,
+			"fileNaming": {
+				"name": "{name}",
+				"postfix": "",
+				"casing": "kebab",
+				"postfixDevider": "."
+			},
+			"path": "/pages",
+			"export": {
+				"default": true,
+				"inline": false
+			}
+		},
+		"container": {
+			"style": true,
+			"story": false,
+			"test": false,
+			"proptypes": false,
+			"index": true,
+			"inFolder": true,
+			"open": true,
+			"fileNaming": {
+				"name": "{name}",
+				"postfix": "",
+				"casing": "kebab",
+				"postfixDevider": "."
+			},
+			"path": "/containers"
+		},
+		"layout": {
+			"style": true,
+			"story": false,
+			"test": false,
+			"proptypes": false,
+			"index": true,
+			"inFolder": true,
+			"open": true,
+			"fileNaming": {
+				"name": "{name}",
+				"postfix": "",
+				"casing": "kebab",
+				"postfixDevider": "."
+			},
+			"path": "/layouts"
+		}
+	},
+	"style": {
+		"type": "styled-components",
+		"fileNaming": {
+			"name": "{name}",
+			"postfix": "styled"
+		},
+		"modules": false,
+		"path": "{componentPath}",
+		"export": {
+			"default": false,
+			"inline": true
+		}
+	},
+	"storybook": {
+		"path": "{componentPath}",
+		"fileNaming": {
+			"postfix": "stories",
+			"name": "{name}",
+			"postfixDevider": ".",
+			"casing": "kebab"
+		}
+	},
+	"test": {
+		"path": "{componentPath}",
+		"fileNaming": {
+			"postfix": "test",
+			"name": "{name}",
+			"postfixDevider": ".",
+			"casing": "kebab"
+		}
+	},
+	"hook": {
+		"path": "/hooks",
+		"fileNaming": {
+			"casing": "kebab",
+			"name": "{name}",
+			"postfix": "",
+			"postfixDevider": "."
+		}
+	},
+	"context": {
+		"path": "/contexts",
+		"export": {
+			"default": false,
+			"destructure": false,
+			"inline": true
+		},
+		"hook": true,
+		"open": true,
+		"customProvider": false,
+		"fileNaming": {
+			"casing": "kebab",
+			"name": "{name}",
+			"postfix": "",
+			"postfixDevider": "."
+		}
+	}
+}
