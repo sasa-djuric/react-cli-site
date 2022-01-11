@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../config/stitches.config';
 
 export const StyledSideNavigation = styled('ul', {
 	all: 'unset',

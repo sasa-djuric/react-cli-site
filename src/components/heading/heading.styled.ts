@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../config/stitches.config';
 
 export const StyledHeading = styled('h2', {
 	color: '$gray1200',

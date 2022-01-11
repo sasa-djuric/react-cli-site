@@ -1,5 +1,5 @@
 import { forwardRef, HTMLProps } from 'react';
-import { CSS } from '../../stitches.config';
+import { CSS } from '../../config/stitches.config';
 import { StyledHeading } from './heading.styled';
 
 type NativeProps = Omit<HTMLProps<HTMLHeadingElement>, 'ref' | 'as' | 'css'>;

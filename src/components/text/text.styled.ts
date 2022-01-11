@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../config/stitches.config';
 
 export const StyledText = styled('span', {
 	fontWeight: 400,

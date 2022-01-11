@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../config/stitches.config';
 import { Text } from '../text';
 
 export const StyledContainer = styled('div', {

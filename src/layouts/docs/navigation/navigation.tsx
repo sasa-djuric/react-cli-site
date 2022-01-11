@@ -1,5 +1,5 @@
 import { SideNavigation } from '../../../components/side-navigation';
-import { CSS } from '../../../stitches.config';
+import { CSS } from '../../../config/stitches.config';
 import { docRoutes } from '../../../config/doc-routes';
 import { StyledNavigationContainer } from './navigation.styled';
 import { Heading } from '../../../components/heading';

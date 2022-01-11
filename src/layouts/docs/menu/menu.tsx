@@ -1,6 +1,6 @@
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { Collapsible } from '../../../components/collapsible';
-import { CSS } from '../../../stitches.config';
+import { CSS } from '../../../config/stitches.config';
 import { Navigation } from '../navigation';
 import { StyledMenu, StyledMenuButton, StyledMenuContainer } from './menu.styled';
 

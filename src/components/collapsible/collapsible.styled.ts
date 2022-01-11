@@ -1,5 +1,5 @@
 import * as BaseCollapsible from '@radix-ui/react-collapsible';
-import { keyframes, styled } from '../../stitches.config';
+import { keyframes, styled } from '../../config/stitches.config';
 
 const open = keyframes({
 	from: {
