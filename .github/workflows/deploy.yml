@@ -31,7 +31,6 @@ jobs:
                   username: ${{ secrets.USERNAME }}
                   password: ${{ secrets.PASSWORD }}
                   port: ${{ secrets.PORT }}
-                  rm: true
                   script: mkdir -p "react-cli-site"
 
             - name: Copy to server
@@ -51,7 +50,6 @@ jobs:
                   username: ${{ secrets.USERNAME }}
                   password: ${{ secrets.PASSWORD }}
                   port: ${{ secrets.PORT }}
-                  rm: true
                   script: |
                       cd react-cli-site
                       docker-compose up -d --build
