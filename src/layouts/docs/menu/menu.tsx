@@ -5,6 +5,7 @@ import { Collapsible } from '../../../components/collapsible';
 import { CSS } from '../../../config/stitches.config';
 import { Navigation } from '../navigation';
 import { StyledMenu, StyledMenuButton, StyledMenuContainer } from './menu.styled';
+import { ScrollArea } from '../../../components/scroll-area';
 
 interface MenuProps {
 	css: CSS;
@@ -38,7 +39,14 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ css }) => {
 					</Collapsible.Trigger>
 				</StyledMenuContainer>
 				<Collapsible.Content>
-					<Navigation css={{ paddingBottom: '$3' }} />
+					<ScrollArea>
+						<ScrollArea.Viewport style={{ height: 'calc(100vh - 111px)' }}>
+							<Navigation css={{ paddingBottom: '$3' }} />
+						</ScrollArea.Viewport>
+						<ScrollArea.Scrollbar orientation='vertical'>
+							<ScrollArea.Thumb />
+						</ScrollArea.Scrollbar>
+					</ScrollArea>
 				</Collapsible.Content>
 			</Collapsible>
 		</StyledMenu>

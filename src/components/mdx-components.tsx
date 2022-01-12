@@ -57,7 +57,7 @@ export const mdxComponents = {
 			<SyntaxHighlighter
 				language={className.replace('language-', '')}
 				style={prism}
-				customStyle={{ paddingBottom: '0px', paddingLeft: '36px', margin: '22px 0px' }}
+				customStyle={{ paddingTop: '22px', paddingBottom: '0px', paddingLeft: '32px', margin: '22px 0px' }}
 			>
 				{children}
 			</SyntaxHighlighter>
