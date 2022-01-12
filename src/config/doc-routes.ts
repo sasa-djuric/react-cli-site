@@ -18,6 +18,10 @@ export const docRoutes: Array<Section> = [
 		label: 'Commands',
 		pages: [
 			{
+				title: 'Init',
+				slug: 'docs/commands/init'
+			},
+			{
 				title: 'Component',
 				slug: 'docs/commands/component'
 			},
