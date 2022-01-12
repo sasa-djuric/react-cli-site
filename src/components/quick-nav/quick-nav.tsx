@@ -25,6 +25,10 @@ export const QuickNav: React.FunctionComponent<QuickNavProps> = props => {
 		return Number(nodeName.replace('H', ''));
 	};
 
+	if (!headings.length) {
+		return null;
+	}
+
 	return (
 		<StyledContainer {...props}>
 			<Heading level={3} css={{ marginBottom: '$5' }}>

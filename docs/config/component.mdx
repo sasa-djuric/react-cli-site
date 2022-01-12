@@ -1,1 +1,39 @@
+---
+title: Component config
+description:
+---
+
 # Component config
+
+<Description>Component cofiguration object</Description>
+
+| Option                  | Type                                   | Description                                                                                                  |
+| ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <code>class</code>      | <code>boolean</code>                   | Create a class component                                                                                     |
+| <code>style</code>      | <code>boolean</code>                   | Create a style file                                                                                          |
+| <code>story</code>      | <code>boolean</code>                   | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
+| <code>proptypes</code>  | <code>boolean</code>                   | Include proptypes                                                                                            |
+| <code>redux</code>      | <code>boolean</code>                   | Include redux                                                                                                |
+| <code>test</code>       | <code>boolean</code>                   | Create a test file                                                                                           |
+| <code>testId</code>     | <code>boolean</code>                   | Adds data-testid attribute on the element                                                                    |
+| <code>index</code>      | <code>boolean</code>                   | Create an index file                                                                                         |
+| <code>open</code>       | <code>boolean</code>                   | Open file in default editor after creating                                                                   |
+| <code>path</code>       | <code>string</code>                    | Specify the path for the file relative to the project source path defined in the project configuration entry |
+| <code>typescript</code> | <code>boolean</code>                   | Use typescript                                                                                               |
+| <code>inFolder</code>   | <code>boolean</code>                   | Save the file in its own folder                                                                              |
+| <code>fileNaming</code> | <code>[FileNaming](#filenaming)</code> | Define file naming                                                                                           |
+| <code>export</code>     | <code>[Export](#export)</code>         | Define export preferences                                                                                    |
+| <code>override</code>   | <code>[Override](#override)</code>     | Override configuration of style, storybook, or test                                                          |
+
+<br />
+<br />
+
+## Override
+
+<br />
+
+| Option                 | Type                                 |
+| ---------------------- | ------------------------------------ |
+| <code>style</code>     | <code>[Style](#style)</code>         |
+| <code>storybook</code> | <code>[Storybook](#storybook)</code> |
+| <code>test</code>      | <code>[Test](#test)</code>           |

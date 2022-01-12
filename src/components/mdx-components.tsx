@@ -14,6 +14,7 @@ SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('bash', bash);
 
 const StyledCode = styled('code', {
+	display: 'inline-block',
 	background: '$gray200',
 	padding: '7px 10px',
 	borderRadius: '0.3em',
@@ -113,7 +114,7 @@ export const mdxComponents = {
 			color: '$gray1100',
 			borderBottom: '1px solid $gray600',
 			padding: '18px 18px 18px 2px',
-			width: '33%',
+			width: '34%',
 			transition: '$colors',
 
 			'@bpPhone': {
@@ -135,5 +136,11 @@ export const mdxComponents = {
 		content: '',
 		display: 'block',
 		marginTop: '16px'
+	}),
+	Space: styled('div', {
+		display: 'flex',
+		gap: '$2',
+		alignItems: 'center',
+		flexWrap: 'wrap'
 	})
 };
