@@ -40,7 +40,10 @@ export const DocsLayout: React.FunctionComponent<DocsLayoutProps> = ({ children 
 						top: '0px',
 						padding: '72px 25px',
 						marginRight: '30px',
-						height: 'max-content'
+						height: 'max-content',
+						'@bpTabletLandscape': {
+							display: 'none'
+						}
 					}}
 				/>
 			</StyledMain>

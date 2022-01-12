@@ -12,7 +12,8 @@ export const StyledWrapper = styled('div', {
 	'@bpTablet': {
 		gridTemplateAreas: `'header header'
 		'menu menu'
-    'main main'`
+    	'main main'`,
+		gridTemplateRows: '65px max-content 1fr'
 	}
 });
 
