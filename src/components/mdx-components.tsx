@@ -19,7 +19,7 @@ export const mdxComponents = {
 				<Heading
 					id={headingToHash(props.children)}
 					level={1}
-					css={{ marginBottom: '$2', cursor: 'pointer', width: 'max-content' }}
+					css={{ marginBottom: '$2', cursor: 'pointer', display: 'inline-block' }}
 					{...props}
 				/>
 			</a>
@@ -31,7 +31,7 @@ export const mdxComponents = {
 				<Heading
 					id={headingToHash(props.children)}
 					level={2}
-					css={{ marginTop: '$7', marginBottom: '$2', cursor: 'pointer', width: 'max-content' }}
+					css={{ marginTop: '$7', marginBottom: '$2', cursor: 'pointer', display: 'inline-block' }}
 					{...props}
 				/>
 			</a>
@@ -43,7 +43,7 @@ export const mdxComponents = {
 				<Heading
 					id={headingToHash(props.children)}
 					level={3}
-					css={{ marginTop: '$7', marginBottom: '$1', cursor: 'pointer', width: 'max-content' }}
+					css={{ marginTop: '$7', marginBottom: '$1', cursor: 'pointer', display: 'inline-block' }}
 					{...props}
 				/>
 			</a>
