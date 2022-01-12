@@ -1,1 +1,32 @@
+---
+title: Context
+description: Command for creating context file
+---
+
 # Context
+
+<Description>Command for creating context file</Description>
+
+```bash
+npx react context <name> [options]
+```
+
+## Arguments
+
+| Argument             | Description      |
+| -------------------- | ---------------- |
+| <code><name\></code> | Name for context |
+
+<br />
+
+## Options
+
+| Option                             | Alias              | Description                                                                                                  |
+| ---------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| <code>--typescript</code>          | <code>-t</code>    | Use typescript                                                                                               |
+| <code>--customProvider</code>      | <code>-cp</code>   | Use custom provider                                                                                          |
+| <code>--hook</code>                | <code>-h</code>    | Create hook                                                                                                  |
+| <code>--no-typescript</code>       | <code>-notp</code> | Don't use typescript                                                                                         |
+| <code>--no-customProvider</code>   | <code>-nocp</code> | Don't use custom provider                                                                                    |
+| <code>--no-hook</code>             | <code>-noh</code>  | Don't create hook                                                                                            |
+| <code>--path <destination\></code> | <EmptyColumn />    | Specify the path for the file relative to the project source path defined in the project configuration entry |

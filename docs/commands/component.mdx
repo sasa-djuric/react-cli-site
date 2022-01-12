@@ -1,1 +1,47 @@
+---
+title: Component
+description: Command for creating component boilerplate files
+---
+
 # Component
+
+<Description>Command for creating component boilerplate files</Description>
+
+```bash
+npx react component [type] <name> [options]
+```
+
+## Arguments
+
+<br />
+
+| Argument             | Description                                                                                                                                                       |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <code>[type]</code>  | Type of component defined in the configuration file                                                                                                               |
+| <code><name\></code> | Name for the component. If you want to make a sub-component for an existing component, you can input a name like this: existing-component-name/new-component-name |
+
+## Options
+
+<br />
+
+| Option                             | Alias              | Description                                                                                                  |
+| ---------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| <code>--class</code>               | <code>-c</code>    | Create a class component                                                                                     |
+| <code>--typescript</code>          | <code>-tp</code>   | Use typescript                                                                                               |
+| <code>--style</code>               | <code>-s</code>    | Create a style file                                                                                          |
+| <code>--story</code>               | <EmptyColumn />    | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
+| <code>--proptypes</code>           | <code>-p</code>    | Include proptypes                                                                                            |
+| <code>--redux</code>               | <code>-r</code>    | Include redux                                                                                                |
+| <code>--test</code>                | <code>-t</code>    | Create a test file                                                                                           |
+| <code>--index</code>               | <code>-i</code>    | Create an index file with default export                                                                     |
+| <code>--inFolder</code>            | <code>-f</code>    | Create a folder for component                                                                                |
+| <code>--file-name <name\></code>   | <code>-fn</code>   | Specify the file name. If this argument is provided, the [file naming config](#filenaming) will be ignored   |
+| <code>--path <destination\></code> | <EmptyColumn />    | Specify the path for the file relative to the project source path defined in the project configuration entry |
+| <code>--no-typescript</code>       | <code>-notp</code> | Don't use typescript                                                                                         |
+| <code>--no-style</code>            | <code>-nos</code>  | Don't create a style file                                                                                    |
+| <code>--no-story</code>            | <EmptyColumn />    | Don't create story book file                                                                                 |
+| <code>--no-proptypes</code>        | <code>-nop</code>  | Don't include proptypes                                                                                      |
+| <code>--no-redux</code>            | <code>-nor</code>  | Don't include redux                                                                                          |
+| <code>--no-test</code>             | <code>-not</code>  | Don't create a test file                                                                                     |
+| <code>--no-index</code>            | <code>-noi</code>  | Don't create an index file                                                                                   |
+| <code>--no-inFolder</code>         | <code>-nof</code>  | Don't create a folder for component                                                                          |

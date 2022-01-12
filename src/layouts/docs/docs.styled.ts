@@ -2,7 +2,8 @@ import { styled } from '../../config/stitches.config';
 
 export const StyledWrapper = styled('div', {
 	display: 'grid',
-	gridTemplateAreas: `'header header'
+	gridTemplateAreas: `
+	'header header'
     'sidebar main'`,
 	gridTemplateRows: '65px 1fr',
 	gridTemplateColumns: '250px 1fr',
@@ -34,7 +35,7 @@ export const StyledMain = styled('main', {
 export const StyledMainWrapper = styled('div', {
 	display: 'block',
 	width: '100%',
-	maxWidth: '780px',
+	maxWidth: '820px',
 	margin: '0px auto',
 	padding: '$10 $8',
 

@@ -8,9 +8,24 @@ import { Description } from './description';
 import { Heading } from './heading';
 import { Paragraph } from './paragraph';
 import { Text } from './text';
+import { styled } from '../config/stitches.config';
 
 SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('bash', bash);
+
+const StyledCode = styled('code', {
+	background: '$gray200',
+	padding: '7px 10px',
+	borderRadius: '0.3em',
+	color: '$primary1100',
+	transition: '$colors',
+	whiteSpace: 'nowrap',
+
+	'@bpPhone': {
+		fontSize: '$2',
+		padding: '5px 8px'
+	}
+});
 
 export const mdxComponents = {
 	h1: (props: any) => (
@@ -53,7 +68,7 @@ export const mdxComponents = {
 	span: (props: any) => <Text css={{ marginTop: '$2', marginBottom: '$7' }} {...props} />,
 	Description: (props: any) => <Description css={{ marginTop: '$2', marginBottom: '$9' }} {...props} />,
 	code: ({ className, children }: any) => {
-		return (
+		return className ? (
 			<SyntaxHighlighter
 				language={className.replace('language-', '')}
 				style={prism}
@@ -61,6 +76,64 @@ export const mdxComponents = {
 			>
 				{children}
 			</SyntaxHighlighter>
+		) : (
+			<StyledCode>{children}</StyledCode>
 		);
-	}
+	},
+	table: styled('table', {
+		width: '100%',
+		textAlign: 'left',
+		borderCollapse: 'collapse',
+		boxSizing: 'border-box',
+		tableLayout: 'auto',
+
+		'@bpPhone': {
+			tableLayout: 'unset'
+		}
+	}),
+	thead: styled('thead', {
+		'& th': {
+			fontSize: '$2',
+			fontWeight: 400,
+			color: '$gray1100',
+			borderBottom: '1px solid $gray600',
+			padding: '14px 18px 14px 2px',
+			transition: '$colors',
+
+			'@bpPhone': {
+				fontSize: '$1'
+			}
+		}
+	}),
+	tbody: styled('tbody', {
+		'& td': {
+			fontSize: '$3',
+			fontWeight: 400,
+			lineHeight: '20px',
+			color: '$gray1100',
+			borderBottom: '1px solid $gray600',
+			padding: '18px 18px 18px 2px',
+			width: '33%',
+			transition: '$colors',
+
+			'@bpPhone': {
+				fontSize: '$2',
+				width: 'unset',
+				padding: '14px 8px 14px 2px'
+			}
+		}
+	}),
+	EmptyColumn: styled('span', {
+		display: 'block',
+		width: '7px',
+		height: '1px',
+		margin: 'auto 0px auto 15px',
+		background: '$gray1100',
+		transition: '$colors'
+	}),
+	br: styled('br', {
+		content: '',
+		display: 'block',
+		marginTop: '16px'
+	})
 };
