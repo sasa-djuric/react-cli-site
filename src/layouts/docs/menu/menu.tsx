@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { Collapsible } from '../../../components/collapsible';
 import { CSS } from '../../../config/stitches.config';
@@ -9,9 +11,24 @@ interface MenuProps {
 }
 
 export const Menu: React.FunctionComponent<MenuProps> = ({ css }) => {
+	const [isOpen, setIsOpen] = useState(false);
+	const router = useRouter();
+
+	function onRouteChangeComplete() {
+		setIsOpen(false);
+	}
+
+	useEffect(() => {
+		router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+		return () => {
+			router.events.on('routeChangeComplete', onRouteChangeComplete);
+		};
+	}, [router.events]);
+
 	return (
 		<StyledMenu css={css}>
-			<Collapsible style={{ width: '100%' }}>
+			<Collapsible style={{ width: '100%' }} open={isOpen} onOpenChange={setIsOpen}>
 				<StyledMenuContainer>
 					<Collapsible.Trigger asChild>
 						<StyledMenuButton>
