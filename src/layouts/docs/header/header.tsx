@@ -3,12 +3,15 @@ import { ArrowTopRightIcon, SunIcon } from '@radix-ui/react-icons';
 import { Navigation } from '../../../components/navigation';
 import { LogoContainer, StyledHeader, StyledThemeToggle } from './header.styled';
 import Logo from '../../../assets/logo.svg';
+import { useTheme } from '../../../hooks/useTheme';
 
 type NativeProps = ComponentProps<typeof StyledHeader>;
 
 interface HeaderProps extends NativeProps {}
 
 export const Header: React.FunctionComponent<HeaderProps> = props => {
+	const { toggle: toggleTheme } = useTheme();
+
 	return (
 		<StyledHeader {...props}>
 			<LogoContainer>
@@ -37,7 +40,7 @@ export const Header: React.FunctionComponent<HeaderProps> = props => {
 						<ArrowTopRightIcon />
 					</Navigation.Item>
 				</a>
-				<StyledThemeToggle>
+				<StyledThemeToggle onClick={toggleTheme}>
 					<SunIcon />
 				</StyledThemeToggle>
 			</Navigation>

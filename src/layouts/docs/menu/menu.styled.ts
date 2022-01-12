@@ -3,7 +3,8 @@ import { styled } from '../../../config/stitches.config';
 export const StyledMenu = styled('div', {
 	display: 'flex',
 	width: '100%',
-	borderBottom: '1px solid $gray600'
+	borderBottom: '1px solid $gray600',
+	transition: '$colors'
 });
 
 export const StyledMenuContainer = styled('div', {
@@ -22,7 +23,7 @@ export const StyledMenuButton = styled('button', {
 	padding: '$1 $2',
 	borderRadius: '2px',
 	boxShadow: '0 0 0 0px $colors$gray800',
-	translate: 'all 0.2s ease',
+	translate: '$microInteractions',
 	backgroundColor: 'transparent',
 	userSelect: 'none',
 

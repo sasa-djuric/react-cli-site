@@ -6,5 +6,6 @@ export const StyledSideBar = styled('aside', {
 	width: '100%',
 	height: '100%',
 	borderRight: '1px solid $gray400',
-	padding: '$6 0px'
+	padding: '$6 0px',
+	transition: '$colors'
 });

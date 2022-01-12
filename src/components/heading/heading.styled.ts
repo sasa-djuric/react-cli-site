@@ -3,6 +3,7 @@ import { styled } from '../../config/stitches.config';
 export const StyledHeading = styled('h2', {
 	color: '$gray1200',
 	fontWeight: '600',
+	transition: '$colors',
 
 	variants: {
 		level: {

@@ -10,7 +10,7 @@ export const StyledSideNavigationItem = styled('li', {
 	fontSize: 'small',
 	cursor: 'pointer',
 	color: '$gray1200',
-	transition: 'color 0.2s ease, background 0.2s ease',
+	transition: '$colors',
 	boxSizing: 'border-box',
 
 	'@bpPhone': {

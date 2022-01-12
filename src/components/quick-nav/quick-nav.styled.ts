@@ -15,7 +15,7 @@ export const StyledNavigationItem = styled(Text, {
 	width: 'max-content',
 	margin: '$2 0px',
 	cursor: 'pointer',
-	transition: 'all 0.2s ease',
+	transition: '$colors',
 	outline: '2px solid transparent',
 	outlineOffset: '2px',
 

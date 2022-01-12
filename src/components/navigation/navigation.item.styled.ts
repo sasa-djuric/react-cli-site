@@ -7,7 +7,7 @@ export const StyledNavigationItem = styled('li', {
 	color: '$gray1100',
 	fontSize: '$medium',
 	cursor: 'pointer',
-	transition: 'all 0.2s ease',
+	transition: '$microInteractions',
 
 	'&:hover': {
 		color: '$gray1200'

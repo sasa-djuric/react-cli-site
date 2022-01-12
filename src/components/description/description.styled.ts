@@ -6,6 +6,7 @@ export const StyledDescription = styled('span', {
 	lineHeight: '30px',
 	color: '$gray1100',
 	letterSpacing: '-.016em',
+	transition: '$colors',
 
 	'@bpPhone': {
 		fontSize: '$5',

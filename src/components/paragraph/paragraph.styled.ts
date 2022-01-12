@@ -5,6 +5,7 @@ export const StyledParagraph = styled('p', {
 	lineHeight: '27px',
 	color: '$gray1200',
 	fontWeight: 300,
+	transition: '$colors',
 
 	'@bpPhone': {
 		fontSize: '$3',

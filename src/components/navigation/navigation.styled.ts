@@ -5,6 +5,7 @@ export const StyledNavigation = styled('ul', {
 	gap: '$5',
 	color: '$gray1200',
 	listStyle: 'none',
+	transition: '$colors',
 
 	'@bpPhone': {
 		gap: '$3'
