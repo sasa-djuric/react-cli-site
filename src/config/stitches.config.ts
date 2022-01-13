@@ -151,7 +151,7 @@ const config = createStitches({
 		transitions: {
 			2: '0.2s ease',
 			3: '0.3s ease',
-			colors: 'background $2, color $2, fill $2, border-color $2, outline-color $2, box-shadow-color $2',
+			colors: 'background $2, color $2, fill $2, border-color $2, outline-color $2, box-shadow-color $2, text-decoration-color $2',
 			microInteractions: 'all $2'
 		}
 	},
