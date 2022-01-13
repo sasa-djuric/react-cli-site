@@ -7,20 +7,13 @@ description:
 
 <Description>Context cofiguration object</Description>
 
-| Option                  | Type                                                | Description                                                                                                  |
-| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <code>class</code>      | <code>boolean</code>                                | Create a class component                                                                                     |
-| <code>style</code>      | <code>boolean</code>                                | Create a style file                                                                                          |
-| <code>story</code>      | <code>boolean</code>                                | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
-| <code>proptypes</code>  | <code>boolean</code>                                | Include proptypes                                                                                            |
-| <code>redux</code>      | <code>boolean</code>                                | Include redux                                                                                                |
-| <code>test</code>       | <code>boolean</code>                                | Create a test file                                                                                           |
-| <code>testId</code>     | <code>boolean</code>                                | Adds data-testid attribute on the element                                                                    |
-| <code>index</code>      | <code>boolean</code>                                | Create an index file                                                                                         |
-| <code>open</code>       | <code>boolean</code>                                | Open file in default editor after creating                                                                   |
-| <code>path</code>       | <code>string</code>                                 | Specify the path for the file relative to the project source path defined in the project configuration entry |
-| <code>typescript</code> | <code>boolean</code>                                | Use typescript                                                                                               |
-| <code>inFolder</code>   | <code>boolean</code>                                | Save the file in its own folder                                                                              |
-| <code>fileNaming</code> | [FileNaming](#filenaming)                           | Define file naming                                                                                           |
-| <code>export</code>     | [Export](#export)                                   | Define export preferences                                                                                    |
-| <code>override</code>   | [ComponentOverrideConfig](#componentconfigoverride) | Override configuration of style, storybook, or test                                                          |
+| Option         | Type                                                  | Description                                                                                                  |
+| -------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| open           | <code>boolean</code>                                  | Open file in default editor after creating                                                                   |
+| path           | <code>string</code>                                   | Specify the path for the file relative to the project source path defined in the project configuration entry |
+| typescript     | <code>boolean</code>                                  | Use typescript                                                                                               |
+| inFolder       | <code>boolean</code>                                  | Save the file in its own folder                                                                              |
+| customProvider | <code>boolean</code>                                  | Create custom wrapper component around context provider                                                      |
+| hook           | <code>boolean</code>                                  | Create hook inside context file for context usage                                                            |
+| fileNaming     | [File naming](#file-naming)                           | Define file naming                                                                                           |
+| export         | [Export](#export) & <code>destructure: boolean</code> | Define export preferences                                                                                    |
