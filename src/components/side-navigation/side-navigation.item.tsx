@@ -1,4 +1,4 @@
-import { forwardRef, HTMLProps, useLayoutEffect, useState } from 'react';
+import { forwardRef, HTMLProps, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { StyledSideNavigationItem } from './side-navigation.item.styled';
 import { useRouter } from 'next/router';
@@ -18,7 +18,7 @@ export const SideNavigationItem = forwardRef<HTMLLIElement, MenuItemProps>(
 			setIsActive(location.pathname === href);
 		}
 
-		useLayoutEffect(() => {
+		useEffect(() => {
 			setIsActive(location.pathname === href);
 			router.events.on('routeChangeComplete', onRouteChangeComplete);
 

@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ligthTheme } from '../config/stitches.config';
 
 type Theme = 'dark' | 'light';
@@ -13,7 +13,7 @@ export function useTheme() {
 	};
 
 	const setup = useCallback(() => {
-		const currentTheme = theme || localStorage.getItem('theme') || 'dark';
+		const currentTheme = theme || localStorage?.getItem('theme') || 'dark';
 		const html = document.getElementsByTagName('html').item(0)!;
 
 		if (currentTheme === 'dark') {
@@ -25,12 +25,12 @@ export function useTheme() {
 		}
 	}, [theme]);
 
-	useLayoutEffect(() => {
-		const theme = localStorage.getItem('theme') as Theme | undefined;
+	useEffect(() => {
+		const theme = localStorage?.getItem('theme') as Theme | undefined;
 		setTheme(theme || 'dark');
 	}, []);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (theme) {
 			setup();
 		}
