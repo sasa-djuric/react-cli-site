@@ -9,24 +9,12 @@ import { Heading } from './heading';
 import { Paragraph } from './paragraph';
 import { Text } from './text';
 import { styled } from '../config/stitches.config';
+import { Table } from './table';
+import { Code } from './code';
+import { Anchor } from './anchor';
 
 SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('bash', bash);
-
-const StyledCode = styled('code', {
-	display: 'inline-block',
-	background: '$gray200',
-	padding: '7px 10px',
-	borderRadius: '0.3em',
-	color: '$primary1100',
-	transition: '$colors',
-	whiteSpace: 'nowrap',
-
-	'@bpPhone': {
-		fontSize: '$2',
-		padding: '5px 8px'
-	}
-});
 
 export const mdxComponents = {
 	h1: (props: any) => (
@@ -78,52 +66,15 @@ export const mdxComponents = {
 				{children}
 			</SyntaxHighlighter>
 		) : (
-			<StyledCode>{children}</StyledCode>
+			<Code>{children}</Code>
 		);
 	},
-	table: styled('table', {
-		width: '100%',
-		textAlign: 'left',
-		borderCollapse: 'collapse',
-		boxSizing: 'border-box',
-		tableLayout: 'auto',
-
-		'@bpPhone': {
-			tableLayout: 'unset'
-		}
-	}),
-	thead: styled('thead', {
-		'& th': {
-			fontSize: '$2',
-			fontWeight: 400,
-			color: '$gray1100',
-			borderBottom: '1px solid $gray600',
-			padding: '14px 18px 14px 2px',
-			transition: '$colors',
-
-			'@bpPhone': {
-				fontSize: '$1'
-			}
-		}
-	}),
-	tbody: styled('tbody', {
-		'& td': {
-			fontSize: '$3',
-			fontWeight: 400,
-			lineHeight: '20px',
-			color: '$gray1100',
-			borderBottom: '1px solid $gray600',
-			padding: '18px 18px 18px 2px',
-			width: '34%',
-			transition: '$colors',
-
-			'@bpPhone': {
-				fontSize: '$2',
-				width: 'unset',
-				padding: '14px 8px 14px 2px'
-			}
-		}
-	}),
+	table: Table,
+	thead: Table.Head,
+	tbody: Table.Body,
+	tr: Table.Row,
+	th: Table.Th,
+	td: Table.Td,
 	EmptyColumn: styled('span', {
 		display: 'block',
 		width: '7px',
@@ -142,5 +93,6 @@ export const mdxComponents = {
 		gap: '$2',
 		alignItems: 'center',
 		flexWrap: 'wrap'
-	})
+	}),
+	a: Anchor
 };
