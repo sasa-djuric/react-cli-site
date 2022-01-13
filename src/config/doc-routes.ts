@@ -6,11 +6,11 @@ export const docRoutes: Array<Section> = [
 		pages: [
 			{
 				title: 'Introduction',
-				slug: 'docs/overview/introduction'
+				slug: '/docs/overview/introduction'
 			},
 			{
 				title: 'Getting started',
-				slug: 'docs/overview/getting-started'
+				slug: '/docs/overview/getting-started'
 			}
 		]
 	},
@@ -19,19 +19,19 @@ export const docRoutes: Array<Section> = [
 		pages: [
 			{
 				title: 'Init',
-				slug: 'docs/commands/init'
+				slug: '/docs/commands/init'
 			},
 			{
 				title: 'Component',
-				slug: 'docs/commands/component'
+				slug: '/docs/commands/component'
 			},
 			{
 				title: 'Context',
-				slug: 'docs/commands/context'
+				slug: '/docs/commands/context'
 			},
 			{
 				title: 'Hook',
-				slug: 'docs/commands/hook'
+				slug: '/docs/commands/hook'
 			}
 		]
 	},
@@ -40,35 +40,35 @@ export const docRoutes: Array<Section> = [
 		pages: [
 			{
 				title: 'Overview',
-				slug: 'docs/config/overview'
+				slug: '/docs/config/overview'
 			},
 			{
 				title: 'Project',
-				slug: 'docs/config/project'
+				slug: '/docs/config/project'
 			},
 			{
 				title: 'Component',
-				slug: 'docs/config/component'
+				slug: '/docs/config/component'
 			},
 			{
 				title: 'Style',
-				slug: 'docs/config/style'
+				slug: '/docs/config/style'
 			},
 			{
 				title: 'Story',
-				slug: 'docs/config/story'
+				slug: '/docs/config/story'
 			},
 			{
 				title: 'Test',
-				slug: 'docs/config/test'
+				slug: '/docs/config/test'
 			},
 			{
 				title: 'Context',
-				slug: 'docs/config/context'
+				slug: '/docs/config/context'
 			},
 			{
 				title: 'Hook',
-				slug: 'docs/config/hook'
+				slug: '/docs/config/hook'
 			}
 		]
 	}

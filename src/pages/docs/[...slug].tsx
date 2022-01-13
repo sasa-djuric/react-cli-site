@@ -28,12 +28,12 @@ const Docs: React.FunctionComponent<DocsProps> = ({ meta, slug, mdxSource }) => 
 			<MDXRemote {...mdxSource} components={mdxComponents} />
 			<PageNavigation css={{ marginTop: '$10' }}>
 				{pageNavigation?.previousPage && (
-					<PageNavigation.Previous href={pageNavigation?.previousPage.slug.replace('docs/', '')}>
+					<PageNavigation.Previous href={pageNavigation?.previousPage.slug}>
 						{pageNavigation?.previousPage.title}
 					</PageNavigation.Previous>
 				)}
 				{pageNavigation?.nextPage && (
-					<PageNavigation.Next href={pageNavigation?.nextPage.slug.replace('docs/', '')}>
+					<PageNavigation.Next href={pageNavigation?.nextPage.slug}>
 						{pageNavigation?.nextPage.title}
 					</PageNavigation.Next>
 				)}
@@ -65,7 +65,7 @@ export const getStaticPaths = async () => {
 			return section.pages.map(page => {
 				return {
 					params: {
-						slug: page.slug.replace('docs/', '').split('/')
+						slug: page.slug.replace('/docs/', '').split('/')
 					}
 				};
 			});

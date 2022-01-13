@@ -12,7 +12,7 @@ export function usePageInfo(routes: Array<Section>, slug: string) {
 			for (let pIndex = 0; pIndex < section.pages.length; pIndex++) {
 				const page = routes[sIndex].pages[pIndex];
 
-				if (page.slug === `docs/${slug}`) {
+				if (page.slug === `/docs/${slug}`) {
 					sectionIndex = sIndex;
 					pageIndex = pIndex;
 					break;

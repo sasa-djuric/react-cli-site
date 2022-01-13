@@ -19,7 +19,7 @@ export const Navigation: React.FunctionComponent<NavigationProps> = props => {
 						</Heading>
 						<SideNavigation {...props}>
 							{section.pages.map(page => (
-								<SideNavigation.Item key={page.slug} href={`/${page.slug}`}>
+								<SideNavigation.Item key={page.slug} href={page.slug}>
 									{page.title}
 								</SideNavigation.Item>
 							))}
