@@ -4,13 +4,14 @@ import { Navigation } from '../../../components/navigation';
 import { LogoContainer, StyledHeader, StyledThemeToggle } from './header.styled';
 import Logo from '../../../assets/logo.svg';
 import { useTheme } from '../../../hooks/useTheme';
+import { Tooltip } from '../../../components/tooltip';
 
 type NativeProps = ComponentProps<typeof StyledHeader>;
 
 interface HeaderProps extends NativeProps {}
 
 export const Header: React.FunctionComponent<HeaderProps> = props => {
-	const { toggle: toggleTheme } = useTheme();
+	const theme = useTheme();
 
 	return (
 		<StyledHeader {...props}>
@@ -40,9 +41,17 @@ export const Header: React.FunctionComponent<HeaderProps> = props => {
 						<ArrowTopRightIcon />
 					</Navigation.Item>
 				</a>
-				<StyledThemeToggle onClick={toggleTheme}>
-					<SunIcon />
-				</StyledThemeToggle>
+				<Tooltip delayDuration={100}>
+					<Tooltip.Trigger asChild>
+						<StyledThemeToggle onClick={theme.toggle}>
+							<SunIcon />
+						</StyledThemeToggle>
+					</Tooltip.Trigger>
+					<Tooltip.Content side='bottom' align='center' sideOffset={4}>
+						Toggle theme
+						<Tooltip.Arrow offset={6} />
+					</Tooltip.Content>
+				</Tooltip>
 			</Navigation>
 		</StyledHeader>
 	);
