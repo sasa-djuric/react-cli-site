@@ -14,6 +14,7 @@ import { styled } from '../config/stitches.config';
 import { Table } from './table';
 import { Code } from './code';
 import { Anchor } from './anchor';
+import { Fragment } from 'react';
 
 SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('bash', bash);
@@ -31,24 +32,33 @@ const HeadingLink = styled('a', {
 });
 
 const createHeading = (initialProps: Partial<HeadingProps>) => (props: React.PropsWithChildren<HeadingProps>) => {
-	const hash = '#' + headingToHash(props.children as string);
+	const hash = initialProps.level !== 1 ? headingToHash(props.children as string) : undefined;
+	const href = initialProps.level !== 1 ? '#' + hash : undefined;
+
+	const Wrapper = href
+		? ({ children }: React.PropsWithChildren<{}>) => (
+				<Link href={href} passHref>
+					<HeadingLink>
+						{children}
+						<Link2Icon />
+					</HeadingLink>
+				</Link>
+		  )
+		: Fragment;
 
 	return (
-		<Link href={hash} passHref>
-			<HeadingLink>
-				<Heading
-					id={hash}
-					{...initialProps}
-					{...props}
-					css={{
-						cursor: 'pointer',
-						display: 'inline-block',
-						...(initialProps.css || {})
-					}}
-				/>
-				<Link2Icon />
-			</HeadingLink>
-		</Link>
+		<Wrapper>
+			<Heading
+				id={hash}
+				{...initialProps}
+				{...props}
+				css={{
+					cursor: href ? 'pointer' : 'default',
+					display: 'inline-block',
+					...(initialProps.css || {})
+				}}
+			/>
+		</Wrapper>
 	);
 };
 

@@ -15,8 +15,8 @@ export const QuickNav: React.FunctionComponent<QuickNavProps> = props => {
 
 	useEffect(() => {
 		const headingElements: HTMLHeadingElement[] = Array.from(
-			document.querySelectorAll<HTMLHeadingElement>('a>h1[id], a>h2[id], a>h3[id], a>h4[id')
-		).slice(1);
+			document.querySelectorAll<HTMLHeadingElement>('a>h2[id], a>h3[id], a>h4[id')
+		);
 
 		setHeadings(headingElements);
 	}, [router.asPath]);
