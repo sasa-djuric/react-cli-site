@@ -16,8 +16,8 @@ export const StyledScrollAreaThumb = styled(ScrollAreaPrimitive.Thumb, {
 		transform: 'translate(-50%, -50%)',
 		width: '100%',
 		height: '100%',
-		minWidth: 44,
-		minHeight: 44
+		minWidth: '44px',
+		minHeight: '44px'
 	}
 });
 
@@ -26,24 +26,28 @@ export const StyledScrollAreaScrollBar = styled(ScrollAreaPrimitive.ScrollAreaSc
 	userSelect: 'none',
 	touchAction: 'none',
 	padding: '3px',
-	$size: '',
-
-	'&[data-orientation="vertical"]': {
-		width: '$size'
-	},
-
-	'&[data-orientation="horizontal"]': {
-		flexDirection: 'column',
-		height: '$size'
-	},
 
 	variants: {
 		size: {
 			small: {
-				$size: '10px'
+				'&[data-orientation="vertical"]': {
+					width: '10px'
+				},
+
+				'&[data-orientation="horizontal"]': {
+					flexDirection: 'column',
+					height: '10px'
+				}
 			},
 			medium: {
-				$size: '15px'
+				'&[data-orientation="vertical"]': {
+					width: '15px'
+				},
+
+				'&[data-orientation="horizontal"]': {
+					flexDirection: 'column',
+					height: '15px'
+				}
 			}
 		}
 	},
