@@ -16,3 +16,19 @@ description:
 | <code>verbose</code>    | <code>boolean</code>        | Outputs operation and file path on stdout          |
 | <code>fileNaming</code> | [File naming](#file-naming) | Define file naming                                 |
 | <code>export</code>     | [Export](#export)           | Define export preferences                          |
+
+## File naming
+
+| Option                      | Type                                                                                                 | Description                                                   |
+| --------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| <code>name</code>           | <code>string</code>                                                                                  | Specify name or naming type                                   |
+| <code>postfix</code>        | <code>string</code>                                                                                  | Define postfix or [postfix type](#postfix-type) for file name |
+| <code>postfixDevider</code> | <code>string</code>                                                                                  | Define postfix devider                                        |
+| <code>casing</code>         | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Specify casing type                                           |
+
+## Export
+
+| Option               | Type                 | Description                              |
+| -------------------- | -------------------- | ---------------------------------------- |
+| <code>default</code> | <code>boolean</code> | Specify export type (default or named)   |
+| <code>inline</code>  | <code>boolean</code> | Specify should export be declared inline |

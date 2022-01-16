@@ -7,33 +7,28 @@ description:
 
 <Description>Component cofiguration object</Description>
 
-| Option                  | Type                        | Description                                                                                                  |
-| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <code>class</code>      | <code>boolean</code>        | Create a class component                                                                                     |
-| <code>style</code>      | <code>boolean</code>        | Create a style file                                                                                          |
-| <code>story</code>      | <code>boolean</code>        | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
-| <code>proptypes</code>  | <code>boolean</code>        | Include proptypes                                                                                            |
-| <code>redux</code>      | <code>boolean</code>        | Include redux                                                                                                |
-| <code>test</code>       | <code>boolean</code>        | Create a test file                                                                                           |
-| <code>testId</code>     | <code>boolean</code>        | Adds data-testid attribute on the element                                                                    |
-| <code>index</code>      | <code>boolean</code>        | Create an index file                                                                                         |
-| <code>open</code>       | <code>boolean</code>        | Open file in default editor after creating                                                                   |
-| <code>path</code>       | <code>string</code>         | Specify the path for the file relative to the project source path defined in the project configuration entry |
-| <code>typescript</code> | <code>boolean</code>        | Use typescript                                                                                               |
-| <code>inFolder</code>   | <code>boolean</code>        | Save the file in its own folder                                                                              |
-| <code>fileNaming</code> | [File naming](#file-naming) | Define file naming                                                                                           |
-| <code>export</code>     | [Export](#export)           | Define export preferences                                                                                    |
-| <code>override</code>   | [Override](#override)       | Override configuration of style, storybook, or test                                                          |
-
-<br />
-<br />
+| Option                  | Type                                            | Description                                                                                                  |
+| ----------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <code>class</code>      | <code>boolean</code>                            | Create a class component                                                                                     |
+| <code>style</code>      | <code>boolean</code>                            | Create a style file                                                                                          |
+| <code>story</code>      | <code>boolean</code>                            | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
+| <code>proptypes</code>  | <code>boolean</code>                            | Include proptypes                                                                                            |
+| <code>redux</code>      | <code>boolean</code>                            | Include redux                                                                                                |
+| <code>test</code>       | <code>boolean</code>                            | Create a test file                                                                                           |
+| <code>testId</code>     | <code>boolean</code>                            | Adds data-testid attribute on the element                                                                    |
+| <code>index</code>      | <code>boolean</code>                            | Create an index file                                                                                         |
+| <code>open</code>       | <code>boolean</code>                            | Open file in default editor after creating                                                                   |
+| <code>path</code>       | <code>string</code>                             | Specify the path for the file relative to the project source path defined in the project configuration entry |
+| <code>typescript</code> | <code>boolean</code>                            | Use typescript                                                                                               |
+| <code>inFolder</code>   | <code>boolean</code>                            | Save the file in its own folder                                                                              |
+| <code>fileNaming</code> | [File naming](/docs/config/project#file-naming) | Define file naming                                                                                           |
+| <code>export</code>     | [Export](/docs/config/project#export)           | Define export preferences                                                                                    |
+| <code>override</code>   | [Override](#override)                           | Override configuration of style, storybook, or test                                                          |
 
 ## Override
 
-<br />
-
-| Option                 | Type                    |
-| ---------------------- | ----------------------- |
-| <code>style</code>     | [Style](#style)         |
-| <code>storybook</code> | [Storybook](#storybook) |
-| <code>test</code>      | [Test](#test)           |
+| Option                 | Type                            |
+| ---------------------- | ------------------------------- |
+| <code>style</code>     | [Style](/docs/config/style)     |
+| <code>storybook</code> | [Storybook](/docs/config/story) |
+| <code>test</code>      | [Test](/docs/config/test)       |
