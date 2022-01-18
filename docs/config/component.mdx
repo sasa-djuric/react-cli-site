@@ -1,28 +1,30 @@
 ---
 title: Component config
-description:
+description: Component configuration object
 ---
 
 # Component config
 
-<Description>Component cofiguration object</Description>
+<Description>Component configuration object</Description>
+
+A component can have multiple types, each type having its own configuration in the component configuration object.
 
 | Option                  | Type                                            | Description                                                                                                  |
 | ----------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | <code>class</code>      | <code>boolean</code>                            | Create a class component                                                                                     |
 | <code>style</code>      | <code>boolean</code>                            | Create a style file                                                                                          |
 | <code>story</code>      | <code>boolean</code>                            | Create a [story](https://storybook.js.org/docs/react/get-started/introduction) file                          |
-| <code>proptypes</code>  | <code>boolean</code>                            | Include proptypes                                                                                            |
-| <code>redux</code>      | <code>boolean</code>                            | Include redux                                                                                                |
+| <code>proptypes</code>  | <code>boolean</code>                            | Use proptypes                                                                                                |
+| <code>redux</code>      | <code>boolean</code>                            | Use redux                                                                                                    |
 | <code>test</code>       | <code>boolean</code>                            | Create a test file                                                                                           |
 | <code>testId</code>     | <code>boolean</code>                            | Adds data-testid attribute on the element                                                                    |
 | <code>index</code>      | <code>boolean</code>                            | Create an index file                                                                                         |
 | <code>open</code>       | <code>boolean</code>                            | Open file in default editor after creating                                                                   |
 | <code>path</code>       | <code>string</code>                             | Specify the path for the file relative to the project source path defined in the project configuration entry |
 | <code>typescript</code> | <code>boolean</code>                            | Use typescript                                                                                               |
-| <code>inFolder</code>   | <code>boolean</code>                            | Save the file in its own folder                                                                              |
-| <code>fileNaming</code> | [File naming](/docs/config/project#file-naming) | Define file naming                                                                                           |
-| <code>export</code>     | [Export](/docs/config/project#export)           | Define export preferences                                                                                    |
+| <code>inFolder</code>   | <code>boolean</code>                            | Save component files in its own folder                                                                       |
+| <code>fileNaming</code> | [File naming](/docs/config/project#file-naming) | Specify file naming preferences                                                                              |
+| <code>export</code>     | [Export](/docs/config/project#export)           | Specify export preferences                                                                                   |
 | <code>override</code>   | [Override](#override)                           | Override configuration of style, storybook, or test                                                          |
 
 ## Override

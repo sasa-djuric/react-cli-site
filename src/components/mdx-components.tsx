@@ -15,6 +15,7 @@ import { styled } from '../config/stitches.config';
 import { Table } from './table';
 import { Code } from './code';
 import { Anchor } from './anchor';
+import { List } from './list';
 
 SyntaxHighlighter.registerLanguage('json', json);
 SyntaxHighlighter.registerLanguage('bash', bash);
@@ -122,5 +123,7 @@ export const mdxComponents = {
 			</Link>
 		) : (
 			<Anchor {...props} />
-		)
+		),
+	ul: (props: any) => <List css={{ marginBottom: '$8' }} {...props} />,
+	li: List.Item
 };

@@ -1,1 +1,101 @@
 # Overview
+
+<Description>Configuration file overview</Description>
+
+Configuration for React CLI is stored in JSON file named react.config.json. If the configuration scope is set to a project, a configuration file will be generated at the root of the project.
+
+It consists of several sections:
+
+-   [project](/docs/config/project)
+-   [component](/docs/config/component)
+-   [style](/docs/config/style)
+-   [story](/docs/config/story)
+-   [test](/docs/config/test)
+-   [context](/docs/config/context)
+-   [hook](/docs/config/hook)
+
+## Example
+
+```json
+{
+	"project": {
+		"path": "./src",
+		"typescript": true,
+		"fileNaming": {
+			"casing": "kebab",
+			"name": "{name}",
+			"postfix": "",
+			"postfixDevider": "."
+		},
+		"lint": false,
+		"format": false,
+		"verbose": true,
+		"export": {
+			"default": false,
+			"inline": true
+		}
+	},
+	"component": {
+		"default": {
+			"style": true,
+			"story": true,
+			"test": true,
+			"proptypes": false,
+			"index": true,
+			"inFolder": true,
+			"open": true,
+			"path": "/components",
+			"class": false,
+			"redux": false,
+			"testId": false
+		},
+		"view": {
+			"style": true,
+			"story": true,
+			"test": true,
+			"proptypes": false,
+			"index": true,
+			"inFolder": true,
+			"open": true,
+			"path": "/views",
+			"class": false,
+			"redux": false,
+			"testId": false
+		}
+	},
+	"style": {
+		"type": "scss",
+		"modules": true,
+		"path": "{componentPath}",
+		"export": {
+			"default": false,
+			"inline": true
+		}
+	},
+	"storybook": {
+		"path": "{componentPath}",
+		"fileNaming": {
+			"postfix": "stories"
+		}
+	},
+	"test": {
+		"path": "{componentPath}",
+		"fileNaming": {
+			"postfix": "test",
+			"postfixDevider": "."
+		}
+	},
+	"hook": {
+		"path": "/hooks",
+		"fileNaming": {
+			"casing": "camel"
+		}
+	},
+	"context": {
+		"path": "/contexts",
+		"hook": true,
+		"open": true,
+		"customProvider": false
+	}
+}
+```

@@ -18,10 +18,6 @@ export const docRoutes: Array<Section> = [
 		label: 'Commands',
 		pages: [
 			{
-				title: 'Init',
-				slug: '/docs/commands/init'
-			},
-			{
 				title: 'Component',
 				slug: '/docs/commands/component'
 			},
@@ -36,7 +32,7 @@ export const docRoutes: Array<Section> = [
 		]
 	},
 	{
-		label: 'Config',
+		label: 'Configuration',
 		pages: [
 			{
 				title: 'Overview',

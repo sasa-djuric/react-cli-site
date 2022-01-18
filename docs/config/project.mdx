@@ -1,30 +1,44 @@
 ---
 title: Project config
-description:
+description: Project cofiguration object
 ---
 
 # Project config
 
-<Description>Project cofiguration object</Description>
+<Description>Project configuration object</Description>
 
-| Option                  | Type                        | Description                                        |
-| ----------------------- | --------------------------- | -------------------------------------------------- |
-| <code>path</code>       | <code>string</code>         | Project source path                                |
-| <code>typescript</code> | <code>boolean</code>        | Uses typescript                                    |
-| <code>lint</code>       | <code>boolean</code>        | Uses eslint if it's used to lint created files     |
-| <code>format</code>     | <code>boolean</code>        | Uses prettier if it's used to format created files |
-| <code>verbose</code>    | <code>boolean</code>        | Outputs operation and file path on stdout          |
-| <code>fileNaming</code> | [File naming](#file-naming) | Define file naming                                 |
-| <code>export</code>     | [Export](#export)           | Define export preferences                          |
+Project configuration object describes project preferences. It will be merged internally in each configuration object.
+
+| Option                  | Type                        | Description                                                              |
+| ----------------------- | --------------------------- | ------------------------------------------------------------------------ |
+| <code>path</code>       | <code>string</code>         | Project source path                                                      |
+| <code>typescript</code> | <code>boolean</code>        | Uses typescript                                                          |
+| <code>lint</code>       | <code>boolean</code>        | Uses eslint to lint created files if eslint is used in the project       |
+| <code>format</code>     | <code>boolean</code>        | Uses prettier to format created files if prettier is used in the project |
+| <code>verbose</code>    | <code>boolean</code>        | Outputs operation and file path to stdout                                |
+| <code>fileNaming</code> | [File naming](#file-naming) | Define file naming preferences                                           |
+| <code>export</code>     | [Export](#export)           | Define export preferences                                                |
 
 ## File naming
 
-| Option                      | Type                                                                                                 | Description                                                   |
-| --------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| <code>name</code>           | <code>string</code>                                                                                  | Specify name or naming type                                   |
-| <code>postfix</code>        | <code>string</code>                                                                                  | Define postfix or [postfix type](#postfix-type) for file name |
-| <code>postfixDevider</code> | <code>string</code>                                                                                  | Define postfix devider                                        |
-| <code>casing</code>         | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Specify casing type                                           |
+| Option                      | Type                                                                                                 | Description                                                     |
+| --------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| <code>name</code>           | <code>string</code>                                                                                  | Define name or [name placeholders](#name-placeholders)          |
+| <code>postfix</code>        | <code>string</code>                                                                                  | Define postfix or [postfix placeholders](#postfix-placeholders) |
+| <code>postfixDevider</code> | <code>string</code>                                                                                  | Define postfix devider                                          |
+| <code>casing</code>         | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Define casing type                                              |
+
+### Name placeholders
+
+| Type                | Description   |
+| ------------------- | ------------- |
+| <code>{name}</code> | Provided name |
+
+### Postfix placeholders
+
+| Type                | Description |
+| ------------------- | ----------- |
+| <code>{type}</code> | File type   |
 
 ## Export
 
