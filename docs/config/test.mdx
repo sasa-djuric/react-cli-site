@@ -7,9 +7,22 @@ description: Test configuration object
 
 <Description>Test configuration object</Description>
 
-| Option                  | Type                                            | Description                                                                                                  |
-| ----------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <code>path</code>       | <code>string</code>                             | Specify the path for the file relative to the project source path defined in the project configuration entry |
-| <code>typescript</code> | <code>boolean</code>                            | Use typescript                                                                                               |
-| <code>inFolder</code>   | <code>boolean</code>                            | Save the file in its own folder                                                                              |
-| <code>fileNaming</code> | [File naming](/docs/config/project#file-naming) | Specify file naming preferences                                                                              |
+| Option                  | Type                        | Description                                                                                                  |
+| ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <code>path</code>       | <code>string</code>         | Specify the path for the file relative to the project source path defined in the project configuration entry |
+| <code>typescript</code> | <code>boolean</code>        | Use typescript                                                                                               |
+| <code>inFolder</code>   | <code>boolean</code>        | Save the file in its own folder                                                                              |
+| <code>fileNaming</code> | [File naming](#file-naming) | Specify file naming preferences                                                                              |
+
+## File naming
+
+| Option              | Type                                                                                                 | Description                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| <code>name</code>   | <code>string</code>                                                                                  | Specify name. [Name placeholders](#name-placeholders) are available for usage in name |
+| <code>casing</code> | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Specify casing type                                                                   |
+
+### Name placeholders
+
+| Type                | Description   |
+| ------------------- | ------------- |
+| <code>{name}</code> | Provided name |

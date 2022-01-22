@@ -7,7 +7,7 @@ description: Project cofiguration object
 
 <Description>Project configuration object</Description>
 
-Project configuration object describes project preferences. It will be merged internally in each configuration object.
+Project configuration object describes project preferences. It will be merged internally in each configuration entry.
 
 | Option                  | Type                        | Description                                                              |
 | ----------------------- | --------------------------- | ------------------------------------------------------------------------ |
@@ -16,29 +16,22 @@ Project configuration object describes project preferences. It will be merged in
 | <code>lint</code>       | <code>boolean</code>        | Uses eslint to lint created files if eslint is used in the project       |
 | <code>format</code>     | <code>boolean</code>        | Uses prettier to format created files if prettier is used in the project |
 | <code>verbose</code>    | <code>boolean</code>        | Outputs operation and file path to stdout                                |
-| <code>fileNaming</code> | [File naming](#file-naming) | Define file naming preferences                                           |
-| <code>export</code>     | [Export](#export)           | Define export preferences                                                |
+| <code>fileNaming</code> | [File naming](#file-naming) | Specify file naming preferences                                          |
+| <code>export</code>     | [Export](#export)           | Specify export preferences                                               |
 
 ## File naming
 
-| Option                      | Type                                                                                                 | Description                                                     |
-| --------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| <code>name</code>           | <code>string</code>                                                                                  | Define name or [name placeholders](#name-placeholders)          |
-| <code>postfix</code>        | <code>string</code>                                                                                  | Define postfix or [postfix placeholders](#postfix-placeholders) |
-| <code>postfixDevider</code> | <code>string</code>                                                                                  | Define postfix devider                                          |
-| <code>casing</code>         | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Define casing type                                              |
+| Option              | Type                                                                                                 | Description                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| <code>name</code>   | <code>string</code>                                                                                  | Specify name. [Name placeholders](#name-placeholders) are available for usage in name |
+| <code>casing</code> | <Space><code>camel</code> \| <code>pascal</code> \| <code>kebab</code> \| <code>snake</code></Space> | Specify casing type                                                                   |
 
 ### Name placeholders
 
-| Type                | Description   |
-| ------------------- | ------------- |
-| <code>{name}</code> | Provided name |
-
-### Postfix placeholders
-
-| Type                | Description |
-| ------------------- | ----------- |
-| <code>{type}</code> | File type   |
+| Type                | Description                 |
+| ------------------- | --------------------------- |
+| <code>{name}</code> | Provided name               |
+| <code>{type}</code> | File type (style, story...) |
 
 ## Export
 

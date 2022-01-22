@@ -4,10 +4,10 @@ export const docRoutes: Array<Section> = [
 	{
 		label: 'Overview',
 		pages: [
-			{
-				title: 'Introduction',
-				slug: '/docs/overview/introduction'
-			},
+			// {
+			// 	title: 'Introduction',
+			// 	slug: '/docs/overview/introduction'
+			// },
 			{
 				title: 'Getting started',
 				slug: '/docs/overview/getting-started'
