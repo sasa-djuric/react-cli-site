@@ -10,9 +10,9 @@ services:
         volumes:
             - ./:/app
         environment:
-            VIRTUAL_HOST: reactcli.dev,www.reactcli.dev
-            LETSENCRYPT_HOST: reactcli.dev,www.reactcli.dev
-            LETSENCRYPT_EMAIL: contact@reactcli.dev
+            VIRTUAL_HOST: reactcli.org,www.reactcli.org
+            LETSENCRYPT_HOST: reactcli.org,www.reactcli.org
+            LETSENCRYPT_EMAIL: contact@reactcli.org
 
 networks:
     default:
