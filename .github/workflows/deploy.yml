@@ -5,6 +5,10 @@ on:
         branches:
             - master
 
+env:
+    NEXT_PUBLIC_DOMAIN: ${{secrets.NEXT_PUBLIC_DOMAIN}}
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: ${{secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS}}
+
 jobs:
     build:
         name: Build and Deploy
