@@ -8,7 +8,7 @@ interface AnchorProps extends NativeProps {}
 // eslint-disable-next-line react/display-name
 export const Anchor: React.FunctionComponent<AnchorProps> = forwardRef(({ children, ...props }, forwardedRef) => {
 	return (
-		<StyledAnchor target={props.href?.startsWith('http') ? '_blank' : undefined} {...props}>
+		<StyledAnchor ref={forwardedRef} target={props.href?.startsWith('http') ? '_blank' : undefined} {...props}>
 			{children}
 		</StyledAnchor>
 	);
