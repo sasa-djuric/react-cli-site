@@ -1,6 +1,6 @@
 ## React CLI website
 
-This is the source code of the [React CLI documentation](https://react-cli.dev).
+This is the source code of the [React CLI documentation](https://reactcli.org).
 
 ---
 
